@@ -1,41 +1,65 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portfolio PS Vita</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wii-Style Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background"></div>
+  <!-- Canvas for animated waves background -->
+  <canvas id="bgcanvas"></canvas>
 
-    <header>
-        <h1>Mi Portfolio</h1>
-    </header>
+  <header class="topbar">
+    <h1>Wii Portfolio</h1>
+  </header>
 
-    <main>
-        <section class="icons">
-          <div class="icon" onclick="openSection('about')">
-            <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Sobre mí">
-            <p>Sobre mí</p>
-          </div>
-          <div class="icon" onclick="openSection('projects')">
-            <img src="https://static.wikia.nocookie.net/playstationallstarsbattleroyale/images/3/3d/Trophies.png" alt="Trophies">
-            <p>Proyectos</p>
-          </div>
-          <div class="icon" onclick="openSection('contact')">
-            <img src="https://static.wikia.nocookie.net/playstationallstarsbattleroyale/images/5/56/Friends.png" alt="Friends">
-            <p>Contacto</p>
-          </div>
-        </section>
+  <main class="stage">
+    <section class="channels" id="channels">
+      <!-- channels: update image src to the files you add in /images -->
+      <div class="channel" data-key="projects" tabindex="0" data-title="Projects">
+        <div class="channel-inner">
+          <img src="images/channel-projects.png" alt="Projects icon">
+          <div class="label">Projects</div>
+        </div>
+      </div>
 
+      <div class="channel" data-key="about" tabindex="0" data-title="About Me">
+        <div class="channel-inner">
+          <img src="images/channel-about.png" alt="About icon">
+          <div class="label">About Me</div>
+        </div>
+      </div>
 
-    </main>
+      <div class="channel" data-key="contact" tabindex="0" data-title="Contact">
+        <div class="channel-inner">
+          <img src="images/channel-contact.png" alt="Contact icon">
+          <div class="label">Contact</div>
+        </div>
+      </div>
 
-    <section id="content" class="hidden"></section>
+      <div class="channel" data-key="cv" tabindex="0" data-title="CV">
+        <div class="channel-inner">
+          <img src="images/channel-cv.png" alt="CV icon">
+          <div class="label">CV</div>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
+      <div class="channel" data-key="recs" tabindex="0" data-title="Recommendations">
+        <div class="channel-inner">
+          <img src="images/channel-recs.png" alt="Recommendations icon">
+          <div class="label">Recommendations</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overlay / panel that opens when a channel is clicked -->
+    <section id="panel" class="panel hidden" role="dialog" aria-hidden="true">
+      <button id="closePanel" class="close">✕</button>
+      <div id="panelContent" class="panel-content"></div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
 </body>
 </html>
-
-
