@@ -235,3 +235,16 @@
   });
 
 })();
+
+
+const cursor = document.getElementById('wii-cursor');
+
+document.addEventListener('mousemove', (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+
+  // Aplicamos movimiento suavizado
+  cursor.style.transform = `translate(${x}px, ${y}px)`;
+});
+
+
