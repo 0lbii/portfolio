@@ -192,3 +192,18 @@ body { overflow:hidden; color:#064; }
   .channel { width:44vw; height:120px; }
   .channel img { width:56px; height:56px; }
 }
+
+body {
+  cursor: none; 
+}
+
+#wii-cursor {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: url('wii-pointer.png') no-repeat center center;
+  background-size: contain;
+  pointer-events: none; /* Para que no bloquee clicks */
+  transform: translate(-50%, -50%); /* Centrar sobre el punto del mouse */
+  transition: transform 0.1s ease-out; /* Movimiento suave */
+}
