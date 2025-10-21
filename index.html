@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio PS Vita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background"></div>
+
+    <header>
+        <h1>Mi Portfolio</h1>
+    </header>
+
+    <main>
+        <section class="icons">
+            <div class="icon" onclick="openSection('about')">
+                <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Sobre mí">
+                <p>Sobre mí</p>
+            </div>
+            <div class="icon" onclick="openSection('projects')">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Proyectos">
+                <p>Proyectos</p>
+            </div>
+            <div class="icon" onclick="openSection('contact')">
+                <img src="https://cdn-icons-png.flaticon.com/512/2099/2099199.png" alt="Contacto">
+                <p>Contacto</p>
+            </div>
+        </section>
+    </main>
+
+    <section id="content" class="hidden"></section>
+
+    <script src="script.js"></script>
+</body>
+</html>
